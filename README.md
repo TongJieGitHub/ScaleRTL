@@ -74,13 +74,11 @@ If you use ScaleRTL in your work, please cite our paper:
 We also gratefully acknowledge that ScaleRTL builds upon prior work, Khronos:
 
 ```bibtex
-@inproceedings{Khronos,
-  author = {Kexing, Zhou and Yun, Liang and Yibo, Lin and Runsheng, Wang and Ru, Huang},
-  title = {Khronos: Fusing Memory Access for Improved Hardware RTL Simulation},
-  booktitle = {MICRO '23: 55th IEEE/ACM International Symposium on Microarchitecture},
-  publisher = {ACM},
-  year = {2023},
-  url = {https://doi.org/10.1145/3613424.3614301},
-  doi = {10.1145/3613424.3614301}
+@inproceedings{zhou2023khronos,
+  title={Khronos: Fusing memory access for improved hardware RTL simulation},
+  author={Zhou, Kexing and Liang, Yun and Lin, Yibo and Wang, Runsheng and Huang, Ru},
+  booktitle={Proceedings of the 56th Annual IEEE/ACM International Symposium on Microarchitecture},
+  pages={180--193},
+  year={2023}
 }
 ```
