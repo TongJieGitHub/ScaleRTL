@@ -1,0 +1,13 @@
+/install
+/build*
+/.cache
+/myTest*
+/.vscode
+/autotest/build*
+/autotest/results*
+/autotest/install
+/autotest/bin
+/autotest/*/*.txt
+*.log
+/comp-time/*
+/results

@@ -1,0 +1,12 @@
+Conv2D_extended_1
+Conv2D_extended_2
+Conv2D_extended_4
+GEMM_extended_1
+GEMM_extended_2
+GEMM_extended_4
+Gemmini_extended_1
+Gemmini_extended_2
+Gemmini_extended_4
+SIGMA_extended_1
+SIGMA_extended_2
+SIGMA_extended_4

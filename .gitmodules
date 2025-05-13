@@ -1,0 +1,9 @@
+[submodule "third_party/circt"]
+	path = third_party/circt
+	url = https://github.com/llvm/circt.git
+[submodule "third_party/kahypar"]
+	path = third_party/kahypar
+	url = https://github.com/kahypar/kahypar.git
+[submodule "third_party/tools/firrtl/firrtl"]
+	path = third_party/tools/firrtl/firrtl
+	url = https://github.com/chipsalliance/firrtl.git

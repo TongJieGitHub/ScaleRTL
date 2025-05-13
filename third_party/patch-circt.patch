@@ -1,0 +1,40 @@
+diff --git a/lib/Dialect/Comb/CombDialect.cpp b/lib/Dialect/Comb/CombDialect.cpp
+index 9e02232fc..cfeb506a4 100644
+--- a/lib/Dialect/Comb/CombDialect.cpp
++++ b/lib/Dialect/Comb/CombDialect.cpp
+@@ -16,10 +16,27 @@
+ #include "mlir/IR/Builders.h"
+ #include "mlir/IR/BuiltinTypes.h"
+ #include "mlir/IR/DialectImplementation.h"
++#include "mlir/Transforms/InliningUtils.h"
+ 
+ using namespace circt;
+ using namespace comb;
+ 
++
++//===----------------------------------------------------------------------===//
++// CombDialect Interfaces
++//===----------------------------------------------------------------------===//
++
++namespace {
++struct CombInlinerInterface : public mlir::DialectInlinerInterface {
++  using mlir::DialectInlinerInterface::DialectInlinerInterface;
++  // Operations in the hwarith dialect are always legal to inline since they are
++  // pure.
++  bool isLegalToInline(Operation *, Region *, bool, IRMapping &) const final {
++    return true;
++  }
++};
++}
++
+ //===----------------------------------------------------------------------===//
+ // Dialect specification.
+ //===----------------------------------------------------------------------===//
+@@ -30,6 +47,7 @@ void CombDialect::initialize() {
+ #define GET_OP_LIST
+ #include "circt/Dialect/Comb/Comb.cpp.inc"
+       >();
++addInterfaces<CombInlinerInterface>();
+ }
+ 
+ /// Registered hook to materialize a single constant operation from a given
