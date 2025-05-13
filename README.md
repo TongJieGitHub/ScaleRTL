@@ -1,7 +1,7 @@
 # ScaleRTL
 
 
-## Introductions
+## Introduction
 
 ScaleRTL is a cycle-accurate software RTL simulation tool designed for deep learning accelerators. It provides a scalable and unified code generation flow that automatically produces optimized, parallel RTL simulation code. ScaleRTL leverages structural parallelism in accelerator designs to eliminate redundant code and generate simulators targeting both CPU and GPU backends using MLIR. By integrating CUDA Graph, it reduces kernel launch overhead, further accelerating GPU-based RTL simulation.
 
